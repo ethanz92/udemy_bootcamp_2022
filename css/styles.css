@@ -1,0 +1,23 @@
+body {
+    background-color: #d2d75f;
+}
+
+hr {
+    border-color: #483838;
+    border-style: dotted none none;
+    border-width: 4px;
+    width: 10%;
+}
+
+h1, 
+h3 {
+    color: #42855b;
+}
+
+.headpic {
+    border-radius: 100%;
+}
+
+.headpic:hover {
+    padding: 2px;
+}
