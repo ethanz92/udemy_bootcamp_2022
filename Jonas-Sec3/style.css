@@ -1,0 +1,139 @@
+/* * {
+    border-top: 10px solid #1098ad;
+} */
+
+body {
+    font-family: sans-serif;
+    color: #444;
+    border-top: 10px solid #1098ad;
+}
+
+h1,
+h2,
+h3 {
+    color: #1098ad;
+}
+
+
+h1 {
+    font-size: 26px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p {
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+li {
+    font-size: 20px;
+}
+
+/* decendent selector */
+/* footer p {
+    font-size: 16px;
+} */
+
+/* nested decendent selector */
+/* article header p {
+    font-style: italic;
+} */
+
+#author {
+    font-style: italic;
+    font-size: 18px;
+}
+
+#copyright {
+    font-size: 16px;
+}
+
+.related-author {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* removing dots in ul */
+.related {
+    list-style: none;
+}
+
+.main-header {
+    background-color: #f7f7f7;
+}
+
+aside {
+    background-color: #f7f7f7;
+    border-top: 5px solid #1098ad;
+    border-bottom: 5px solid #1098ad;
+}
+
+/* TODO: Pseudo-classes */
+
+/* select all li elements who are the first child of their parents */
+li:first-child {
+    font-weight: bold;
+}
+
+/* select all li elements who are the last child of their parents */
+li:last-child {
+    font-style: italic;
+}
+
+/* second child
+li:nth-child(2) {
+    color: red;
+}
+/* even/odd child
+li:nth-child(even) {
+    color: blue;
+} */
+
+/* the below doesn't work because p is not child of article. first child of article is actually header so it doesn't work. */
+/* article p:first-child {
+    color: red;
+} */
+
+/* below works because there is a p that's article's last child */
+/* article p:last-child {
+    color: red;
+} */
+
+/* TODO: styling links */
+/* select anchors with links (href attributes) */
+a:link {
+    color: #1098ad;
+    text-decoration: none;
+}
+
+a:visited {
+    /* color: #777; */
+    color: #1098ad;
+}
+
+a:hover {
+    color: orangered;
+    font-weight: bold;
+    text-decoration: underline dotted orangered;
+}
+
+/* when actually click */
+a:active {
+    background-color: black;
+    font-style: italic;
+}
