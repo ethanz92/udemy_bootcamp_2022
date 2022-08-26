@@ -1,11 +1,35 @@
-/* * {
-    border-top: 10px solid #1098ad;
-} */
+* {
+    /* border-top: 10px solid #1098ad; */
+    /* 经常先开始设为0之后好调整，因为*很容易就可以被override */
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: sans-serif;
     color: #444;
     border-top: 10px solid #1098ad;
+    position: relative;
+}
+
+.container {
+    width: 800px;
+    /* trick to center a container
+    left and right margin to be equal and auto calculated */
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 0 auto;
+}
+
+.main-header {
+    background-color: #f7f7f7;
+    padding: 20px 40px;
+    margin-bottom: 60px;
+    height: 80px;
+}
+
+.post-header {
+    margin-bottom: 40px;
 }
 
 h1,
@@ -23,10 +47,13 @@ h1 {
 
 h2 {
     font-size: 40px;
+    margin-bottom: 30px;
 }
 
 h3 {
     font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 40px;
 }
 
 h4 {
@@ -38,10 +65,17 @@ h4 {
 p {
     font-size: 22px;
     line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+ul, ol {
+    margin-left: 50px;
+    margin-bottom: 20px;
 }
 
 li {
     font-size: 20px;
+    margin-bottom: 10px;
 }
 
 /* decendent selector */
@@ -73,14 +107,22 @@ li {
     list-style: none;
 }
 
-.main-header {
-    background-color: #f7f7f7;
+nav {
+    font-size: 18px;
+}
+
+article {
+    margin-bottom: 60px;
 }
 
 aside {
     background-color: #f7f7f7;
     border-top: 5px solid #1098ad;
     border-bottom: 5px solid #1098ad;
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
+    padding: 50px 0;
+    width: 500px;
 }
 
 /* TODO: Pseudo-classes */
@@ -136,4 +178,58 @@ a:hover {
 a:active {
     background-color: black;
     font-style: italic;
+}
+
+.post-img {
+    width: 100%;
+    height: auto;
+}
+
+nav a:link {
+    margin-right: 30px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* 确保最右边没有margin */
+nav a:link:last-child {
+    margin-right: 0;
+}
+
+button {
+    font-size: 22px;
+    padding: 20px;
+    cursor: pointer;
+    position: absolute;
+    /* body is relative所以按body不然就按viewport */
+    bottom: 50px;
+    right: 50px;
+}
+
+/* pseudo elements */
+h1::first-letter {
+    font-style: normal;
+    margin-right: 5px;
+}
+
+/* selecting adjacent elements of h3 (meaning the first following the siblings) */
+/* h3 + p::first-line {
+    color: red;
+} */
+
+h2 {
+    position: relative;
+}
+
+h2::after {
+    content: "TOP";
+    background-color: #ffe70e;
+    color: #444;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 10px;
+    position: absolute;
+    top: -15px;
+    right: -25px;
 }
